@@ -1,0 +1,65 @@
+---
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import {SITE_TITLE} from '../consts'
+import BaseHead from '../components/BaseHead.astro';
+import Header from "../components/Header.astro";
+import Footer from '../components/Footer.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="left">
+				<h2>
+					Welcome to youyi`s personal website!
+				</h2>
+				<p>More about me</p>
+
+				<a>https://github.com/youyiBYSKY</a>
+			</div>
+			<!-- <div class="right">
+				<LinkCard
+				title="Blog"
+				href="/blog"
+				description="查看我的个人博客"
+				/>
+				<LinkCard
+				title="Trifle"
+				href="/trifle"
+				description="查看我的小作品"
+				/>
+				<LinkCard
+				title="About"
+				href="/about"
+				description="关于本站"
+				/>
+			</div>
+			 -->
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	html{
+		height: 70%;
+	}
+	body{
+		height: 100%;
+		width: 100%;
+	}
+	main{
+		display: flex;
+		height: 100%;
+		width: 100%;
+		padding: 10%;
+	}
+	.left{
+		width: 60%;
+	}
+
+</style>
